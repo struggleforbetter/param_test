@@ -1,0 +1,8 @@
+<launch>
+  <arg name="boy" default="zhangfan"/>
+  <arg name="girl" value="zhangyanan"/>
+  <param name="global_girl" value="$(arg girl)" />
+  <node pkg="param_test" type="main" name="param_test" args="boy girl" ns="new_namespace" output="screen">
+    <param name="boy" value="$(arg boy)" />
+  </node>
+</launch>
